@@ -169,6 +169,7 @@ public class task_logic {
      */
 
 
+    /*
 
     //Q8.	An electric power distribution co. charges its domestic consumers as follows
     //follows: consumption units
@@ -178,6 +179,85 @@ public class task_logic {
     //d.	601 and above	390+1.00pu in excess of 600
 
     static void main() {
+        Scanner sc = new Scanner(System.in);
 
+        System.out.println("Enter your units consumption : ");
+        int unit = sc.nextInt();
+
+        double amount =  0;
+
+        if (unit<=200){
+            amount = unit*0.50;
+        }else if(unit<= 400){
+            amount = 100+((unit-200)*0.65);
+        } else if (unit<=600) {
+            amount= 230+((unit-400)*0.80);
+        } else {
+            amount = 390+((unit-600)*1.00);
+        }
+
+        System.out.println("your amount is : "+amount);
     }
+
+     */
+
+
+
+
+    /*
+    ///Q10.	Enter sex m/f  and salary- if m-salary>8000 tax is 5% of salary
+    //else 2% if f-salary>5000 tax is 3% else tax is 1% find a net salary=salary-tax
+
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter your Gender : m/f ");
+        char gender = sc.next().charAt(0);
+
+        System.out.println("Enter your salary amount : ");
+        int salary = sc.nextInt();
+        double tax_amount = 0;
+
+        if(gender == 'm'){
+            if(salary>8000){
+                tax_amount =(salary*5)/100;
+            }else {
+                tax_amount = (salary*2)/100;
+            }
+        }else {
+            if(salary>5000){
+                tax_amount = (salary*3)/100;
+            }else {
+                tax_amount = (salary*1)/100;
+            }
+        }
+
+        System.out.println("Taxable amount is : "+tax_amount);
+    }
+
+     */
+
+
+    /*
+
+    // Q12.	Accept years of investment rate of interest and principal amount of investment find simple interest
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter principle amount :");
+        float p= sc.nextFloat();
+
+        System.out.println("amount of investment in year : ");
+        float n = sc.nextFloat();
+
+        System.out.println("Enter Rate of interest : ");
+        float r = sc.nextFloat();
+
+        float simple_interest_amount = (p*r*n)/100;
+
+        System.out.println("Your simple interest is : "+simple_interest_amount);
+    }
+
+     */
+
 }
