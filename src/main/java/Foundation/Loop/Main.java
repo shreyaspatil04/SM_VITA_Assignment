@@ -634,4 +634,67 @@ public class Main {
         System.out.println(upper_letter);
     }
      */
+
+
+    // table print (single table .... table from 1 to n and table horizontal...)
+    // jo input takla to table like 7 -> u will get table of 7
+    /*
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter number to get table of that number :");
+        int n = sc.nextInt();
+        int ans;
+
+        for (int i = 1; i <= 10 ; i++) {
+            ans = n*i;
+            System.out.println(n+" * "+i+ " = "+ ans);
+        }
+    }
+    
+     */
+
+
+
+    // table from 1 to n horizontal
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter range to get table till that range...");
+        int range = sc.nextInt();
+        int ans;
+
+        for (int i = 1; i <= 10 ; i++) {
+
+            for (int j = 1; j <= range ; j++) {
+                ans = j*i;
+                System.out.print(j+" * "+ i+ " = "+ ans+ "\t    ");
+            }
+            System.out.println();
+        }
+    }
+
+
+
+
+    /*
+    // table from 1 to n verticle
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter range to get table till that range...");
+        int range = sc.nextInt();
+        int ans;
+
+
+        for (int i = 1; i <= range ; i++) {
+
+            for (int j = 1; j <=10 ; j++) {
+                ans = i*j;
+                System.out.println(i+" * "+ j+ " = "+ ans);
+            }
+            System.out.println();
+        }
+    }
+
+     */
 }
