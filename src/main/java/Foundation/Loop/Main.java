@@ -589,4 +589,49 @@ public class Main {
     }
     
      */
+
+
+    /*
+    /// find odd even - another approach (4th -- not optimal)
+
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("enter number");
+        int n = sc.nextInt();
+        while (n>0){
+            n = n-2;
+        }
+        if(n== 0){
+            System.out.println("Even..");
+        }else {
+            System.out.println("Odd");
+        }
+    }
+
+     */
+
+
+
+
+    /*
+
+    // uppper case to lower case and vice versa
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a letter in lowercase :");
+        char letter = sc.next().charAt(0);
+        letter = (char)( letter- 32);
+        System.out.println(letter);
+
+        //.......................................................
+
+        System.out.println("Enter a letter in uppercase");
+        char upper_letter = sc.next().charAt(0);
+
+        upper_letter = (char)(upper_letter + 32);
+        System.out.println(upper_letter);
+    }
+     */
 }
