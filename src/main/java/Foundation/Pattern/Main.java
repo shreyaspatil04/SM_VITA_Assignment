@@ -210,5 +210,126 @@ public class Main {
     }
 
      */
+    /*
+    //           0
+                101
+               21012
+              3210123
+
+     */
+
+    /*
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter row : ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n ; i++) {
+            // print spaces
+            for (int j = 1; j <= n-i ; j++) {
+                System.out.print(" ");
+            }
+            // print 1st part
+            for (int k = i-1; k >= 0 ; k--) {
+                System.out.print(k);
+            }
+            // print 2nd part
+            for (int l =1; l <= i-1 ; l++) {
+                System.out.print(l);
+            }
+            System.out.println();
+        }
+    }
+
+
+/*
+     */
+    //    1
+    //   121
+    //  12321
+    // 1234321
+    //  12321
+    //   121
+    //    1
+/*
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter number : ");
+        int n = sc.nextInt();
+
+        // upper part
+        for (int i = 1; i <= n  ; i++) {
+
+            // space
+            for (int j = 1; j <=n-i; j++) {
+                System.out.print("_");
+            }
+
+            // left side
+            for (int k = 1; k <=i ; k++) {
+                System.out.print(k);
+            }
+
+            // right side
+            for (int l = i-1; l>=1 ; l--) {
+                System.out.print(l);
+            }
+            System.out.println();
+        }
+
+        // lower part
+        for (int i = 1; i<=n-1 ; i++) {
+
+            // print blank space
+            for (int j = 1; j<= i ; j++) {
+                System.out.print("_");
+            }
+
+            // print num
+            for (int k = 1; k <= n-i ; k++) {
+                System.out.print(k);
+            }
+
+            // print right side
+            for (int j = n-i-1; j>=1 ; j--) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
+ */
+
+
+    /*
+
+    //    *
+    //   * *
+    //  * * *
+    // * * * *
+
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter rows : ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n ; i++) {
+
+            // print space
+            for (int j = 1; j <= n-i ; j++) {
+                System.out.print(" ");
+            }
+
+            // print *
+            for (int k = 1; k <=i ; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+     */
+
 }
 
