@@ -148,5 +148,24 @@ public class Main {
 
      */
 
-    /// /
+    //Q8.	Accept 10 number in an array accept a index and a new number and add that number at that index
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[20];
+
+        for (int i = 0; i < 10; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter inedx : ");
+        int index = sc.nextInt();
+
+        System.out.println("Enter value : ");
+        int value = sc.nextInt();
+
+
+
+
+
+    }
 }
