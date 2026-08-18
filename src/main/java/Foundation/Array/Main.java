@@ -148,6 +148,8 @@ public class Main {
 
      */
 
+
+    /*
     //Q8.	Accept 10 number in an array accept a index and a new number and add that number at that index
     static void main() {
         Scanner sc = new Scanner(System.in);
@@ -163,9 +165,51 @@ public class Main {
         System.out.println("Enter value : ");
         int value = sc.nextInt();
 
-//
+        for (int i = 9; i >= index ; i--) {
+            arr[i+1]=arr[i];
+        }
+        arr[index] = value;
 
-
-
+        for (int i = 0; i < 11; i++) {
+            System.out.print(arr[i]+" ");
+        }
     }
+
+     */
+
+
+    /*
+    // Q9.	Accept 10 number in an array accept a number to be deleted from array and print new array
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        int[] arr = new int[15];
+        System.out.println("Enter 10 number in array");
+
+        for (int i = 0; i <10 ; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Your array is :");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(arr[i]+" ");
+        }
+
+        System.out.println();
+
+        System.out.println("Now enter index you want to delete :");
+        int index = sc.nextInt();
+
+        for (int i = index; i <10; i++) {
+            arr[i] =arr[i+1];
+        }
+
+        System.out.println("Now your array is :");
+
+        for (int i = 0; i < 9; i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
+
+     */
 }
