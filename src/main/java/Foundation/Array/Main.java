@@ -22,7 +22,48 @@ package Foundation.Array;
 //a.	Eg 2156897456 o/p  15689
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+
+
+
+// In array when we pass in method it is pass by value not pass by reference
+
+//  only copy of reference is passed not the value  --->     <--------  this arrow is copied by method array and everyone points to same array
+
+/*
+In Java, if you do:
+
+int[] arr_1 = {10, 20, 30};
+int[] arr_2 = {40, 50, 60};
+
+arr_1 = arr_2;
+
+the arrays are not copied. You're making ar refer to the same array object as arr_2.
+
+Think of it like this:
+
+Before:
+
+arr_1     ──────→ [10, 20, 30]
+
+arr_2  ──────→ [40, 50, 60]
+
+After:
+
+arr_1 = arr_2;
+
+you get:
+
+arr_1     ──────→ [40, 50, 60]
+        ↑
+arr_2  ─────────────┘
+
+Now both variables point to the same array.
+
+ */
+
 
 
 public class Main {
@@ -212,4 +253,126 @@ public class Main {
     }
 
      */
+
+
+
+
+    // revise this approach later...
+/*
+    //Q7.	Accept 5 number in an array ( repeat numbers ) print unique array
+
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter 5 element in array (repeat the values..)");
+        int[] arr = new int[5];
+
+        for (int i = 0; i < arr.length ; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            boolean repeat = false;
+
+            for (int j = 0; j < i; j++) {
+                if(arr[i] == arr[j]){
+                    repeat =  true;
+                    break;
+                }
+            }
+            if(!repeat){
+                System.out.print(arr[i]+" ");
+            }
+        }
+    }
+
+ */
+
+
+
+
+    /*
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter 5 element in array (repeat the values..)");
+        int[] arr = new int[5];
+
+        for (int i = 0; i < arr.length ; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        HashMap <Integer , Integer > map = new HashMap<>();
+        for (int a : arr){
+            map.put(a,map.getOrDefault(a,0)+1);
+        }
+
+        for (Map.Entry<Integer,Integer> entry : map.entrySet()){
+            if(entry.getValue() == 1){
+                System.out.print(entry.getKey()+" ");
+            }
+        }
+    }
+
+     */
+
+
+    // Q10.	Accept data in 3*3 matrix two times  and do the sum of it
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+
+        int[][] A = new int[3][3];
+        int[][] B = new int[3][3];
+        int[][] C = new int[3][3];
+
+        System.out.println("Enter values on matix A : ");
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                A[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Enter data in matrix B : ");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                B[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Adding matrix A and B : ");
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                C[i][j] = A[i][j] + B[i][j];
+            }
+        }
+
+        System.out.println("Matrix A : ");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(A[i][j]+" ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("Matrix B : ");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(B[i][j]+" ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("Addition of both matrix is : ");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(C[i][j]+" ");
+            }
+            System.out.println();
+        }
+
+
+
+    }
 }
